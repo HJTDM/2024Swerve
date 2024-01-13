@@ -89,7 +89,7 @@ public class SwerveModule extends SubsystemBase {
   public double getAbsoluteEncoderAngle(){
     double angle = absoluteEncoder.getAbsolutePosition().getValueAsDouble();
     angle -= absoluteEncoderOffset;
-    angle *= (Math.PI / 180);
+    angle *= (2* Math.PI);
     return angle * (absoluteEncoderReversed ? -1.0 : 1.0);
   }
 
